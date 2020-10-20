@@ -135,5 +135,21 @@ Bo wjedzie biały węgorz
      <img src="churchmsg.png" alt="churchbanner" class="center">
     According to youtube statistics, only a small percentage of you are subscribed. I'm sure you're subscribed, but youtube has a glitch going around where it will sometimes unsubscribe you. If you could please scroll down and check, just to see if you're still subscribed, that would be wonderful. It really helps out the channel. Now, without further ado, on to the video!
   </p>
+  <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "nebulas_nova",
+        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+        parent: ["embed.example.com", "othersite.example.com"]
+      });
+    </script>
 </body>
 </html>
