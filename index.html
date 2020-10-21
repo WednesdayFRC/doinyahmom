@@ -135,25 +135,71 @@ Bo wjedzie biały węgorz
     <p5 style="color:LawnGreen;">According to youtube statistics, only a small percentage of you are subscribed. I'm sure you're subscribed, but youtube has a glitch going around where it will sometimes unsubscribe you. If you could please scroll down and check, just to see if you're still subscribed, that would be wonderful. It really helps out the channel. Now, without further ado, on to the video!:)
   </p5>
   <p style="color:purple;">Here's my friend's Twitch channel! Go give them a follow :)
-  <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
+ <div class="twitch">
+  <div class="twitch-video">
+    <iframe
+      src="https://player.twitch.tv/?channel=Nebulas_Nova&parent=www.doinyahmom.com&autoplay=false"
+      frameborder="0"
+      scrolling="no"
+      allowfullscreen="true"
+      height="100%"
+      width="100%">
+    </iframe>
+  </div>
+  <div class="twitch-chat">
+    <iframe
+      frameborder="0"
+      scrolling="no"
+      src="https://www.twitch.tv/embed/phil_nash/chat?parent=philna.sh"
+      height="100%"
+      width="100%">
+    </iframe>
+  </div>
+</div>
+  <css>
+    .twitch .twitch-video {
+  padding-top: 56.25%;
+  position: relative;
+  height: 0;
+}
 
-    <!-- Load the Twitch embed script -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+.twitch .twitch-video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+    .twitch .twitch-chat {
+  height: 400px;
+}
 
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
-        channel: "Nebulas_Nova",
-        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
-        // parent: ["embed.example.com", "othersite.example.com"]
-      });
-    </script>
+.twitch .twitch-chat iframe {
+  width: 100%;
+  height: 100%;
+}
+    @media screen and (min-width: 850px) {
+  .twitch {
+    position: relative;
+  }
+  
+  .twitch .twitch-video {
+    width: 75%;
+    padding-top: 42.1875%;
+  }
+
+  .twitch .twitch-chat {
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+  </css>
   </p>
   <p7>
-    <iframe src="https://player.twitch.tv/?channel=lirik&parent=www.doinyahmom.com" height="1200px" width="720px"></iframe>
+   
   </p7>
 </body>
 </html>
